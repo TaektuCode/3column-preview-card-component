@@ -11,3 +11,90 @@
   --transparent-white: hsla(0, 0%, 100%, 0.75);
   --very-light-gray: hsl(0, 0%, 95%);
 }
+
+/* ======= BODY ======= */
+body {
+  font-family: "Lexend Deca", sans-serif;
+}
+/* ======= MAIN ======= */
+
+.grid-container {
+  display: grid;
+  grid: 1fr 1fr 1fr / 1fr;
+  max-width: 315px;
+  margin: 10rem auto;
+  color: var(--very-light-gray);
+}
+
+.box {
+  padding: 2rem;
+
+  min-height: 450px;
+  position: relative;
+}
+
+.article__header {
+  font-family: "Big Shoulders Display", cursive;
+  text-transform: uppercase;
+  padding: 1rem 0;
+}
+
+.article__para {
+  color: var(--transparent-white);
+  line-height: 1.8rem;
+}
+
+.article__btn {
+  border: none;
+  background-color: var(--very-light-gray);
+  border-radius: 2rem;
+  padding: 0.8rem 2rem;
+  margin: 1rem 0;
+  position: absolute;
+  bottom: 1rem;
+}
+
+.sedans_btn {
+  color: var(--bright-orange);
+}
+
+.suv_btn {
+  color: var(--dark-cyan);
+}
+
+.luxury_btn {
+  color: var(--very-dark-cyan);
+}
+
+.sedans {
+  background-color: var(--bright-orange);
+  border-radius: 1rem 1rem 0 0;
+}
+
+.suv {
+  background-color: var(--dark-cyan);
+}
+
+.luxury {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 0 1rem 1rem;
+}
+
+@media screen and (min-width: 704px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    min-width: 680px;
+    max-width: 870px;
+  }
+
+  .sedans {
+    background-color: var(--bright-orange);
+    border-radius: 1rem 0 0 1rem;
+  }
+
+  .luxury {
+    background-color: var(--very-dark-cyan);
+    border-radius: 0 1rem 1rem 0;
+  }
+}
